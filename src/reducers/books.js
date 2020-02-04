@@ -1,4 +1,8 @@
-import { initBooks } from '../index';
+const initBooks = [
+  {id: Math.random()*100, title: "Initial Book 1", category: "Kids"},
+  {id: Math.random()*100, title: "Initial Book 2", category: "Learning"},
+  {id: Math.random()*100, title: "Initial Book 3", category: "History"}
+]
 
 const booksReducer = (state=initBooks, action) => {
   switch(action.type){
