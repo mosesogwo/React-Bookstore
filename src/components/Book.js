@@ -10,3 +10,5 @@ const Book = (props) => {
     </tr>
   )
 }
+
+export default Book;

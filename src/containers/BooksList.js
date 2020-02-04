@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
+import { connect } from 'react-redux';
+import Book from '../components/Book';
 
 class BooksList extends Component {
   render = () => {
+    const booksRows = this.props.books.map((book) => {
+      return(<Book book={book} />)
+    })
     return (
       <div>
         <table>
@@ -14,12 +18,14 @@ class BooksList extends Component {
             </tr>
           </thead>
           <tbody>
-            
+            {booksRows}
           </tbody>
         </table>
       </div>
     )
   }
 }
-
-export default connect()(BooksList)
+const mapStateToProps = (state) => ({
+  books: state.books
+})
+export default connect(mapStateToProps)(BooksList)
