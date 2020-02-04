@@ -5,7 +5,7 @@ import BooksForm from './containers/BooksForm';
 function App() {
   return (
     <div>
-      <h1>Magic-Books Bookstore</h1>
+      <h1>Magic Books</h1>
       <BooksList />
       <BooksForm />
     </div>
