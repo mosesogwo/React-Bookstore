@@ -1,5 +1,6 @@
+import { initBooks } from '../index';
 
-const booksReducer = (state=[], action) => {
+const booksReducer = (state=initBooks, action) => {
   switch(action.type){
     case 'CREATE_BOOK':
       return [...state, action.book];

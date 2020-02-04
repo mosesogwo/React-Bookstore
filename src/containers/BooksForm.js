@@ -27,3 +27,5 @@ class BooksForm extends Component {
     )
   }
 }
+
+export default BooksForm;
