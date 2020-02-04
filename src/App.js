@@ -3,7 +3,9 @@ import React from 'react';
 function App() {
   return (
     <div>
-      <h1>Bookstore!</h1>
+      <h1>Magic-Books Bookstore</h1>
+      <BooksList />
+      <BooksForm />
     </div>
   );
 }
