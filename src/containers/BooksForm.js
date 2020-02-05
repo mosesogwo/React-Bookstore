@@ -7,7 +7,7 @@ class BooksForm extends Component {
     super(props);
     this.state = {
       title: '',
-      category: '',
+      category: 'Action',
     }
   }
 
@@ -17,13 +17,11 @@ class BooksForm extends Component {
         ...this.state,
         title: event.target.value,
       })
-      console.log(event.target.value)
     } else if (event.target.id === 'category'){
       this.setState({
         ...this.state,
         category: event.target.value,
       })
-      console.log(event.target.value)
     }
   }
 
@@ -37,17 +35,23 @@ class BooksForm extends Component {
       </option>
     ));
 
+    // const catOptions = (select) => {
+    //   for (let i in categories) {
+    //     select.options[select.options.length] = new Option(categories[i], i);
+    //   }
+    // }
+
     return (
       <div>
         <form>
           <label htmlFor="title">
             Title:
-          <input type="text" id="title" />
+          <input type="text" id="title" onChange={this.handleChange}/>
           </label>
 
           <label htmlFor="category">
             Category:
-          <select id="category">
+          <select id="category" name='category' value={this.state.category} onChange={this.handleChange}>
               {catOptions}
             </select>
           </label>
