@@ -45,7 +45,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 BooksList.propTypes = {
-  books: PropTypes.array,
+  books: PropTypes.arrayOf(PropTypes.object).isRequired,
   removeBook: PropTypes.func.isRequired,
 };
 

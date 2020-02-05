@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { CREATE_BOOK } from '../actions';
 import PropTypes from 'prop-types';
+import { CREATE_BOOK } from '../actions';
 
 const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
@@ -55,12 +55,13 @@ class BooksForm extends Component {
       </option>
     ));
 
+
     return (
       <div>
         <form>
           <label htmlFor="title">
             Title:
-            <input type="text" id="title" onChange={this.handleChange} />
+            <input type="text" id="title" value={this.state.title} onChange={this.handleChange} />
           </label>
 
           <label htmlFor="category">
@@ -81,4 +82,7 @@ const mapDispatchToProps = dispatch => ({
   createBook: book => dispatch(CREATE_BOOK(book)),
 });
 
+BooksForm.propTypes = {
+  createBook: PropTypes.func.isRequired,
+};
 export default connect(null, mapDispatchToProps)(BooksForm);
