@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { CREATE_BOOK } from '../actions';
 
 const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
@@ -25,6 +26,20 @@ class BooksForm extends Component {
     }
   }
 
+  handleSubmit = () => {
+    const newBook = {
+      id: Math.random(),
+      title: this.state.title,
+      category: this.state.category,
+    }
+    this.props.createBook(newBook);
+    this.setState({
+      ...this.state,
+      title: '',
+      category: 'ACTION',
+    })
+  }
+
   render = () => {
     const catOptions = categories.map(category => (
       <option
@@ -34,12 +49,6 @@ class BooksForm extends Component {
         {category}
       </option>
     ));
-
-    // const catOptions = (select) => {
-    //   for (let i in categories) {
-    //     select.options[select.options.length] = new Option(categories[i], i);
-    //   }
-    // }
 
     return (
       <div>
@@ -56,11 +65,17 @@ class BooksForm extends Component {
             </select>
           </label>
 
-          <button type="button">Submit</button>
+          <button type="button" onClick={this.handleSubmit}>Submit</button>
         </form>
       </div>
     );
   }
 };
 
-export default BooksForm;
+const mapDispatchToProps = (dispatch) => {
+  return {
+    createBook: (book) => dispatch(CREATE_BOOK(book)),
+  }
+}
+
+export default connect(null, mapDispatchToProps)(BooksForm);
