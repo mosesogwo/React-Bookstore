@@ -1,44 +1,48 @@
 import React, { Component } from 'react';
-import { CREATE_BOOK } from '../actions';
 import { connect } from 'react-redux';
+import { CREATE_BOOK } from '../actions';
+import PropTypes from 'prop-types';
 
 const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
 class BooksForm extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       title: '',
       category: 'Action',
-    }
+    };
   }
 
   handleChange = event => {
-    if (event.target.id === 'title'){
-      this.setState({
-        ...this.state,
-        title: event.target.value,
-      })
-    } else if (event.target.id === 'category'){
-      this.setState({
-        ...this.state,
-        category: event.target.value,
-      })
+    if (event.target.id === 'title') {
+      const title = event.target.value;
+      this.setState(prevState => ({
+        ...prevState,
+        title,
+      }));
+    } else if (event.target.id === 'category') {
+      const cat = event.target.value;
+      this.setState(prevState => ({
+        ...prevState,
+        category: cat,
+      }));
     }
   }
 
   handleSubmit = () => {
+    const { title, category } = this.state;
+    const { createBook } = this.props;
     const newBook = {
       id: Math.random(),
-      title: this.state.title,
-      category: this.state.category,
-    }
-    this.props.createBook(newBook);
+      title,
+      category,
+    };
+    createBook(newBook);
     this.setState({
-      ...this.state,
       title: '',
       category: 'Action',
-    })
+    });
   }
 
   render = () => {
@@ -56,12 +60,12 @@ class BooksForm extends Component {
         <form>
           <label htmlFor="title">
             Title:
-          <input type="text" id="title" onChange={this.handleChange}/>
+            <input type="text" id="title" onChange={this.handleChange} />
           </label>
 
           <label htmlFor="category">
             Category:
-          <select id="category" name='category' value={this.state.category} onChange={this.handleChange}>
+            <select id="category" name="category" value={this.state.category} onChange={this.handleChange}>
               {catOptions}
             </select>
           </label>
@@ -71,12 +75,10 @@ class BooksForm extends Component {
       </div>
     );
   }
-};
-
-const mapDispatchToProps = dispatch => {
-  return {
-    createBook: book => dispatch(CREATE_BOOK(book)),
-  }
 }
+
+const mapDispatchToProps = dispatch => ({
+  createBook: book => dispatch(CREATE_BOOK(book)),
+});
 
 export default connect(null, mapDispatchToProps)(BooksForm);
