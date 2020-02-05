@@ -73,9 +73,9 @@ class BooksForm extends Component {
   }
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
-    createBook: (book) => dispatch(CREATE_BOOK(book)),
+    createBook: book => dispatch(CREATE_BOOK(book)),
   }
 }
 

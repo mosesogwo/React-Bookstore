@@ -3,14 +3,15 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
 import { REMOVE_BOOK } from '../actions/index'
+
 const BooksList = props => {
-  const { books } = props;
+  const { books, removeBook } = props;
 
   const handleRemoveBook = (book) => {
-    this.props.removeBook(book);
+    removeBook(book);
   }
 
-  const booksRows = books.map(book => (<Book book={book} key={Math.random()} removeBook={this.handleRemoveBook} />));
+  const booksRows = books.map(book => (<Book book={book} key={Math.random()} removeBook={() => handleRemoveBook} />));
 
   return (
     <div>
@@ -37,7 +38,7 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   removeBook: (book) => dispatch(REMOVE_BOOK(book)),
-})
+});
 
 BooksList.propTypes = {
   books: PropTypes.oneOfType([PropTypes.object]).isRequired,
