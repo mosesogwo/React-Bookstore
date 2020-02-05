@@ -7,10 +7,11 @@ const initBooks = [
 const booksReducer = (state = initBooks, action) => {
   switch (action.type) {
     case 'CREATE_BOOK':
+      console.log(action.book)
       return [...state, action.book];
     case 'REMOVE_BOOK':
-      console.log(action.id)
-      return (state.filter(book => book.id !== action.id));
+      console.log(action.book)
+      return (state.filter((book) => book.id !== action.id));
     default:
       return state;
   }

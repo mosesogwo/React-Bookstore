@@ -7,11 +7,9 @@ import { REMOVE_BOOK } from '../actions/index'
 const BooksList = props => {
   const { books, removeBook } = props;
 
-  const handleRemoveBook = (book) => {
-    removeBook(book);
-  }
+  const handleRemoveBook = book => (removeBook(book));
 
-  const booksRows = books.map(book => (<Book book={book} key={Math.random()} removeBook={() => handleRemoveBook} />));
+  const booksRows = books.map(book => (<Book book={book} key={book.id} removeBook={handleRemoveBook} />));
 
   return (
     <div>
@@ -43,4 +41,5 @@ const mapDispatchToProps = dispatch => ({
 BooksList.propTypes = {
   books: PropTypes.oneOfType([PropTypes.object]).isRequired,
 };
+
 export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
