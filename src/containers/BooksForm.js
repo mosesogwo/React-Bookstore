@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { CREATE_BOOK } from '../actions';
+import { connect } from 'react-redux';
 
 const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
@@ -36,7 +37,7 @@ class BooksForm extends Component {
     this.setState({
       ...this.state,
       title: '',
-      category: 'ACTION',
+      category: 'Action',
     })
   }
 
