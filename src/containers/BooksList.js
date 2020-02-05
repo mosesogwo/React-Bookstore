@@ -2,10 +2,15 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Book from '../components/Book';
-
+import { REMOVE_BOOK } from '../actions/index'
 const BooksList = props => {
   const { books } = props;
-  const booksRows = books.map(book => (<Book book={book} key={Math.random()} />));
+
+  const handleRemoveBook = (book) => {
+    this.props.removeBook(book);
+  }
+
+  const booksRows = books.map(book => (<Book book={book} key={Math.random()} removeBook={this.handleRemoveBook} />));
 
   return (
     <div>
@@ -30,7 +35,11 @@ const mapStateToProps = state => ({
   books: state.books,
 });
 
+const mapDispatchToProps = dispatch => ({
+  removeBook: (book) => dispatch(REMOVE_BOOK(book)),
+})
+
 BooksList.propTypes = {
   books: PropTypes.oneOfType([PropTypes.object]).isRequired,
 };
-export default connect(mapStateToProps)(BooksList);
+export default connect(mapStateToProps, mapDispatchToProps)(BooksList);
