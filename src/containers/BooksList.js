@@ -25,7 +25,7 @@ const BooksList = props => {
             <th>Book ID</th>
             <th>Title</th>
             <th>Category</th>
-            <th>...</th>
+            <th>  </th>
           </tr>
         </thead>
         <tbody>
@@ -45,7 +45,7 @@ const mapDispatchToProps = dispatch => ({
 });
 
 BooksList.propTypes = {
-  books: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  books: PropTypes.array,
   removeBook: PropTypes.func.isRequired,
 };
 
