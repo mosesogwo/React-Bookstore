@@ -55,18 +55,19 @@ class BooksForm extends Component {
       </option>
     ));
 
+    const { title: stateTitle, category: stateCategory } = this.state;
 
     return (
       <div>
         <form>
           <label htmlFor="title">
             Title:
-            <input type="text" id="title" value={this.state.title} onChange={this.handleChange} />
+            <input type="text" id="title" value={stateTitle} onChange={this.handleChange} />
           </label>
 
           <label htmlFor="category">
             Category:
-            <select id="category" name="category" value={this.state.category} onChange={this.handleChange}>
+            <select id="category" name="category" value={stateCategory} onChange={this.handleChange}>
               {catOptions}
             </select>
           </label>
