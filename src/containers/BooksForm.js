@@ -6,7 +6,24 @@ class BooksForm extends Component {
   constructor(props){
     super(props);
     this.state = {
-      
+      title: '',
+      category: '',
+    }
+  }
+
+  handleChange = (event) => {
+    if (event.target.id === 'title'){
+      this.setState({
+        ...this.state,
+        title: event.target.value,
+      })
+      console.log(event.target.value)
+    } else if (event.target.id === 'category'){
+      this.setState({
+        ...this.state,
+        category: event.target.value,
+      })
+      console.log(event.target.value)
     }
   }
 
