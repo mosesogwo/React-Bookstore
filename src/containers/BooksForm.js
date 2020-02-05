@@ -13,7 +13,7 @@ class BooksForm extends Component {
     }
   }
 
-  handleChange = (event) => {
+  handleChange = event => {
     if (event.target.id === 'title'){
       this.setState({
         ...this.state,

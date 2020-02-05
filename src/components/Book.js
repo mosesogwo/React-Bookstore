@@ -9,7 +9,7 @@ const Book = props => {
       <td>{book.id}</td>
       <td>{book.title}</td>
       <td>{book.category}</td>
-      <td><button onClick={() => removeBook(book)}> Remove </button></td>
+      <td><button type="button" onClick={() => removeBook(book)}> Remove </button></td>
     </tr>
   );
 };
@@ -17,8 +17,8 @@ const Book = props => {
 
 Book.propTypes = {
   book: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  removeBook: PropTypes.func.isRequired,
 };
 
 
 export default Book;
-
