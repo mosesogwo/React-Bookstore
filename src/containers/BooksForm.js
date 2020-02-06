@@ -30,7 +30,8 @@ class BooksForm extends Component {
     }
   }
 
-  handleSubmit = () => {
+  handleSubmit = event => {
+    event.preventDefault();
     const { title, category } = this.state;
     const { createBook } = this.props;
     const newBook = {
@@ -38,11 +39,13 @@ class BooksForm extends Component {
       title,
       category,
     };
-    createBook(newBook);
-    this.setState({
-      title: '',
-      category: 'Action',
-    });
+    if (newBook.title !== '') {
+      createBook(newBook);
+      this.setState({
+        title: '',
+        category: 'Action',
+      });
+    }
   }
 
   render = () => {
@@ -81,7 +84,7 @@ class BooksForm extends Component {
             </select>
           </label>
 
-          <button type="submit" onClick={this.handleSubmit}>ADD BOOK</button>
+          <button type="submit" onClick={event => this.handleSubmit(event)}>ADD BOOK</button>
         </form>
       </div>
     );
