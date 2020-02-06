@@ -25,7 +25,7 @@ const BooksList = props => {
   ));
 
   return (
-    <div className='books'>
+    <div className="books">
       <CategoryFilter currentFilter={filter} changeFilter={handleFilterChange} />
       {booksRows}
     </div>

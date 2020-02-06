@@ -8,7 +8,7 @@ const CategoryFilter = props => {
     <option
       value={category}
       key={Math.random()}
-      className='select-option'
+      className="select-option"
     >
       {category}
     </option>
@@ -21,7 +21,7 @@ const CategoryFilter = props => {
       <form>
         <label htmlFor="filter">
           Filter by category:
-           <select name="filter" id="filter" value={currentFilter} onChange={event => changeFilter(event.target.value)}>
+          <select name="filter" id="filter" value={currentFilter} onChange={event => changeFilter(event.target.value)}>
             {catOptions}
           </select>
         </label>

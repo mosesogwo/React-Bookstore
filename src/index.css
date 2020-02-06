@@ -79,15 +79,20 @@ nav {
   color: #4386bf;
 }
 
-.book a {
+.book button {
   font-size: small;
   color: #4386bf;
-  text-decoration: none;
+  background-color: white;
   padding: 0 5px;
-  border-left: 1px solid black ;
-  border-right: 1px solid black ;
+  border-top: none;
+  border-bottom: none;
+  border-left: 1px solid #777c80;
+  border-right: 1px solid #777c80;
 }
 
+.book button:hover {
+  cursor: pointer;
+}
 
 #filter, #category {
   background-color: white;

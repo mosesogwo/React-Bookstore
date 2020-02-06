@@ -5,15 +5,15 @@ const Book = props => {
   const { book, removeBook } = props;
 
   return (
-    <div className='book'>
-      <div className='book-details'>
+    <div className="book">
+      <div className="book-details">
         <p className="book-cat">{book.category}</p>
         <p className="book-title">{ book.title }</p>
-        <p className="book-author">Author's Name</p>
+        <p className="book-author">Author&apos;s Name</p>
       </div>
-      <a href='#' className="remove-book" onClick={() => removeBook(book)}> Remove </a>
+      <button type="button" className="remove-book" onClick={() => removeBook(book)}> Remove </button>
     </div>
-  )
+  );
 };
 
 
