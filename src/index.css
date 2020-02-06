@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(240, 231, 231);
+  background-color: #fafafa;
 }
 
 code {
@@ -38,6 +38,51 @@ nav {
   width: 18%;
   justify-content: space-around;
   margin-left: 80px;
+}
+
+.books, .book-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.book {
+  width: 95%;
+  margin: 1rem auto;
+  padding-left: 1rem;
+  background-color: white;
+  min-height: 120px;
+  justify-content: space-evenly;
+}
+
+.book-details {
+  min-height: 90px;
+}
+
+.book-details p {
+  margin: 0.2rem;
+}
+
+.book-cat {
+  color: #777c80;
+}
+
+.book-title {
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.book-author {
+  font-size: smaller;
+  color: #4386bf;
+}
+
+.book a {
+  font-size: small;
+  color: #4386bf;
+  text-decoration: none;
+  padding: 0 5px;
+  border-left: 1px solid black ;
+  border-right: 1px solid black ;
 }
 
 

@@ -25,21 +25,9 @@ const BooksList = props => {
   ));
 
   return (
-    <div>
-      <table>
-        <thead>
-          <tr>
-            <th>Book ID</th>
-            <th>Title</th>
-            <th>Category</th>
-            <th>  </th>
-          </tr>
-        </thead>
-        <tbody>
-          {booksRows}
-        </tbody>
-      </table>
+    <div className='books'>
       <CategoryFilter currentFilter={filter} changeFilter={handleFilterChange} />
+      {booksRows}
     </div>
   );
 };

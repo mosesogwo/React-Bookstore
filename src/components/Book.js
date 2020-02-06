@@ -14,13 +14,13 @@ const Book = props => {
   // );
 
   return (
-    <div>
-      <div>{book.category}</div>
-      <div>
-        { book.title }
-        <byline>Author's Name</byline>
+    <div className='book'>
+      <div className='book-details'>
+        <p className="book-cat">{book.category}</p>
+        <p className="book-title">{ book.title }</p>
+        <p className="book-author">Author's Name</p>
       </div>
-    <div><button type="button" onClick={() => removeBook(book)}> Remove </button></div>
+      <a href='#' className="remove-book" onClick={() => removeBook(book)}> Remove </a>
     </div>
   )
 };

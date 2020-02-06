@@ -18,8 +18,8 @@ const CategoryFilter = props => {
   return (
     <form>
       <label htmlFor="filter">
-        Filter:
-        <select name="filter" id="filter" value={currentFilter} onChange={event => changeFilter(event.target.value)}>
+        Filter by category:
+         <select name="filter" id="filter" value={currentFilter} onChange={event => changeFilter(event.target.value)}>
           {catOptions}
         </select>
       </label>
