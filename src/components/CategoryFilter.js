@@ -15,7 +15,8 @@ const CategoryFilter = () => {
 
   return(
     <form>
-      <select>
+      <label htmlFor='filter'>Filter: </label>
+      <select name='filter' value='All' id='filter'>
         <option value='All' key={Math.random()}>All</option>
         {catOptions}
       </select>
