@@ -85,4 +85,8 @@ nav {
   border-right: 1px solid black ;
 }
 
+.filter-form {
+  width: 95%;
+  margin: 1rem auto;
+}
 
