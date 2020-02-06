@@ -1,9 +1,9 @@
 import React from 'react';
 
-const CategoryFilter = () => {
-  const categories = ['Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
+const CategoryFilter = props => {
+  const filterCats = ['All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
 
-  const catOptions = categories.map(category => (
+  const catOptions = filterCats.map(category => (
     <option
       value={category}
       key={Math.random()}
@@ -12,12 +12,13 @@ const CategoryFilter = () => {
     </option>
   ));
 
+  const { changeFilter } = props
+
 
   return(
     <form>
       <label htmlFor='filter'>Filter: </label>
-      <select name='filter' value='All' id='filter'>
-        <option value='All' key={Math.random()}>All</option>
+      <select name='filter' id='filter' onChange={(event)=>changeFilter(event.target.value)}>
         {catOptions}
       </select>
     </form>
