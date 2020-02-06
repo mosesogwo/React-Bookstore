@@ -15,4 +15,4 @@ const CHANGE_FILTER = newFilter => ({
   filter: newFilter,
 })
 
-export { CREATE_BOOK, REMOVE_BOOK };
+export { CREATE_BOOK, REMOVE_BOOK, CHANGE_FILTER };
