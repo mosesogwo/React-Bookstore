@@ -5,7 +5,13 @@ import BooksForm from './containers/BooksForm';
 function App() {
   return (
     <div>
-      <h1>Magic Books</h1>
+      <header className=''>
+        <h1>Magic Books CMS</h1>
+        <nav>
+          <a href='#'>BOOKS</a>
+          <a href='#'>CATEGORIES</a>
+        </nav>
+      </header>
       <BooksList />
       <BooksForm />
     </div>
