@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const CategoryFilter = props => {
   const filterCats = ['All', 'Action', 'Biography', 'History', 'Horror', 'Kids', 'Learning', 'Sci-Fi'];
@@ -12,16 +13,24 @@ const CategoryFilter = props => {
     </option>
   ));
 
-  const { changeFilter, currentFilter } = props
+  const { changeFilter, currentFilter } = props;
 
-  return(
+  return (
     <form>
-      <label htmlFor='filter'>Filter: </label>
-      <select name='filter' id='filter' value={currentFilter} onChange={(event)=>changeFilter(event.target.value)}>
-        {catOptions}
-      </select>
+      <label htmlFor="filter">
+        Filter:
+        <select name="filter" id="filter" value={currentFilter} onChange={event => changeFilter(event.target.value)}>
+          {catOptions}
+        </select>
+      </label>
+
     </form>
-  )
-}
+  );
+};
+
+CategoryFilter.propTypes = {
+  changeFilter: PropTypes.func.isRequired,
+  currentFilter: PropTypes.string.isRequired,
+};
 
 export default CategoryFilter;
