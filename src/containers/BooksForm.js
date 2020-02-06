@@ -72,8 +72,6 @@ class BooksForm extends Component {
             onChange={this.handleChange}
           />
 
-          <label htmlFor="category">
-            Select Category:
             <select
               id="category"
               name="category"
@@ -82,7 +80,6 @@ class BooksForm extends Component {
             >
               {catOptions}
             </select>
-          </label>
 
           <button type="submit" onClick={event => this.handleSubmit(event)}>ADD BOOK</button>
         </form>

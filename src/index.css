@@ -53,8 +53,10 @@ nav {
 .book {
   padding-left: 1rem;
   background-color: white;
-  min-height: 120px;
-  justify-content: space-evenly;
+  min-height: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .book-details {
@@ -79,15 +81,13 @@ nav {
   color: #4386bf;
 }
 
-.book button {
-  font-size: small;
-  color: #4386bf;
-  background-color: white;
-  padding: 0 5px;
-  border-top: none;
-  border-bottom: none;
-  border-left: 1px solid #777c80;
-  border-right: 1px solid #777c80;
+.remove-book {
+  color: white;
+  width: 184px;
+  height: 33px;
+  border-radius: 3px;
+  background-color: #0290ff;
+  margin-right: 100px;
 }
 
 .book button:hover {
@@ -104,18 +104,28 @@ nav {
 }
 
 .books-form input {
-  flex-basis: 40%;
+  width: 664px;
+  height: 45px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+  padding-left: 20px;
 }
 
-.books-form label,
-.books-form button {
-  margin-left: 3rem;
+.books-form select {
+  width: 285px;
+  height: 45px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
 }
 
 .books-form button {
+  width: 184px;
+  height: 45px;
+  border-radius: 3px;
+  color: #ffffff;
   background-color: #0290ff;
-  color: white;
-  font-weight: bolder;
 }
 
 @media only screen and (max-width: 700px) {
@@ -123,9 +133,23 @@ nav {
     flex-direction: column;
   }
 
-  .books-form label,
+  /* body {
+    width: 100%;
+  } */
+
+  .book, .filter-form, .books-form-div {
+    width: 100%;
+    margin: 1rem auto;
+  }
+
+  .books-form-div {
+    margin: 1rem;
+  }
+
+  .books-form select,
+  .books-form input,
   .books-form button {
-    margin: 1rem 0;
+    margin-bottom: 1rem;
   }
 
   nav {
