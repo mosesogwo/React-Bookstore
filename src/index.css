@@ -17,6 +17,7 @@ header {
   background-color: white;
   padding: 0.1em 2em;
   display: flex;
+  align-items: baseline;
 }
 
 header h1 {
@@ -38,3 +39,5 @@ nav {
   justify-content: space-around;
   margin-left: 80px;
 }
+
+
