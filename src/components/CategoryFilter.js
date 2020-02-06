@@ -8,6 +8,7 @@ const CategoryFilter = props => {
     <option
       value={category}
       key={Math.random()}
+      className='select-option'
     >
       {category}
     </option>

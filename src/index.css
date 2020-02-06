@@ -90,3 +90,7 @@ nav {
   margin: 1rem auto;
 }
 
+#filter, .select-option {
+  background-color: white;
+}
+
