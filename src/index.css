@@ -15,7 +15,7 @@ code {
 
 header {
   background-color: white;
-  padding: 0.1em 2em;
+  padding: 0.1rem 2rem;
   display: flex;
   align-items: baseline;
 }
@@ -35,7 +35,7 @@ header a:hover {
 
 nav {
   display: flex;
-  width: 18%;
+  width: 20rem;
   justify-content: space-around;
   margin-left: 80px;
 }
@@ -45,9 +45,12 @@ nav {
   flex-direction: column;
 }
 
-.book {
+.book, .filter-form, .books-form-div {
   width: 95%;
   margin: 1rem auto;
+}
+
+.book {
   padding-left: 1rem;
   background-color: white;
   min-height: 120px;
@@ -85,12 +88,42 @@ nav {
   border-right: 1px solid black ;
 }
 
-.filter-form {
-  width: 95%;
-  margin: 1rem auto;
-}
 
-#filter, .select-option {
+#filter, #category {
   background-color: white;
 }
 
+.books-form {
+  display: flex;
+  align-items: baseline;
+}
+
+.books-form input {
+  flex-basis: 40%;
+}
+
+.books-form label,
+.books-form button {
+  margin-left: 3rem;
+}
+
+.books-form button {
+  background-color: #0290ff;
+  color: white;
+  font-weight: bolder;
+}
+
+@media only screen and (max-width: 700px) {
+  .books-form {
+    flex-direction: column;
+  }
+
+  .books-form label,
+  .books-form button {
+    margin: 1rem 0;
+  }
+
+  nav {
+    width: 30rem;
+  }
+}
