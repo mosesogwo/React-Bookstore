@@ -72,14 +72,14 @@ class BooksForm extends Component {
             onChange={this.handleChange}
           />
 
-            <select
-              id="category"
-              name="category"
-              value={stateCategory}
-              onChange={this.handleChange}
-            >
-              {catOptions}
-            </select>
+          <select
+            id="category"
+            name="category"
+            value={stateCategory}
+            onChange={this.handleChange}
+          >
+            {catOptions}
+          </select>
 
           <button type="submit" onClick={event => this.handleSubmit(event)}>ADD BOOK</button>
         </form>
