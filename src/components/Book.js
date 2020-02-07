@@ -11,7 +11,7 @@ const Book = props => {
         <p className="book-title">{ book.title }</p>
         <p className="book-author">Author&apos;s Name</p>
       </div>
-      <button type="button" className="remove-book" onClick={() => removeBook(book)}> Remove </button>
+      <button type="button" className="remove-book" onClick={() => removeBook(book)}> REMOVE </button>
     </div>
   );
 };

@@ -88,6 +88,7 @@ nav {
   border-radius: 3px;
   background-color: #0290ff;
   margin-right: 75px;
+  font-weight: bolder;
 }
 
 .book button:hover {
@@ -128,6 +129,7 @@ nav {
   border-radius: 3px;
   color: #ffffff;
   background-color: #0290ff;
+  font-weight: bolder;
 }
 
 @media only screen and (max-width: 700px) {
