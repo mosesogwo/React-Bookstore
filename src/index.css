@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fafafa;
+  box-sizing: border-box;
 }
 
 code {
@@ -31,13 +32,6 @@ header a {
 
 header a:hover {
   color: #0290ff;
-}
-
-nav {
-  display: flex;
-  width: 20rem;
-  justify-content: space-around;
-  margin-left: 80px;
 }
 
 .books, .book-details {
@@ -153,10 +147,6 @@ nav {
     width: 90%;
   }
 
-  nav {
-    width: 30rem;
-  }
-
   .filter-form {
     margin-left: 2rem;
   }
@@ -172,12 +162,6 @@ nav {
     flex-direction: column;
     align-items: center;
     padding: 0;
-  }
-
-  nav {
-    justify-content: space-between;
-    width: 50%;
-    margin: 0 auto;
   }
 
   #filter {
