@@ -1,7 +1,7 @@
 const initBooks = [
-  { id: Math.random() * 100, title: 'Initial Book 1', category: 'Kids' },
-  { id: Math.random() * 100, title: 'Initial Book 2', category: 'Learning' },
-  { id: Math.random() * 100, title: 'Initial Book 3', category: 'History' },
+  { id: Math.random() * 100, title: 'The Adventures of Funa', category: 'Kids' },
+  { id: Math.random() * 100, title: 'Save your nation, Become a Legend', category: 'Learning' },
+  { id: Math.random() * 100, title: 'The Journey of the Nations', category: 'History' },
 ];
 
 const booksReducer = (state = initBooks, action) => {
