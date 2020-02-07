@@ -2,7 +2,7 @@
 
 > A front-end React & Redux application for the organization and management of a bookstore for Magic-Books Inc.
 
-![](2020-02-07-08-11-32.png)
+![](2020-02-07-13-08-25.png)
 
 ## Built With
 
