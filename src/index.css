@@ -171,6 +171,19 @@ nav {
   .book {
     flex-direction: column;
     align-items: center;
-    /* margin: 0; */
+    /* justify-content: flex-start; */
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    /* justify-content: flex-start; */
+  }
+
+  nav {
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
   }
 }
