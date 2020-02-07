@@ -6,7 +6,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fafafa;
-  box-sizing: border-box;
 }
 
 code {
@@ -90,7 +89,7 @@ header a:hover {
 }
 
 .books-form {
-  width: 95%;
+  width: 100%;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
@@ -143,8 +142,9 @@ header a:hover {
   .books-form select,
   .books-form input,
   .books-form button {
-    margin-bottom: 1rem;
-    width: 90%;
+    margin-bottom: 0.5rem;
+    width: 80%;
+    padding: 0;
   }
 
   .filter-form {
