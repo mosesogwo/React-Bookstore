@@ -94,21 +94,11 @@ nav {
   cursor: pointer;
 }
 
-#filter, #category {
-  background-color: white;
-}
-
 .books-form {
   width: 95%;
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-}
-
-.books-form select,
-.books-form input,
-.books-form button {
-
 }
 
 .books-form input {
@@ -120,12 +110,16 @@ nav {
   padding-left: 20px;
 }
 
-.books-form select {
+.books-form select, #filter {
   width: 285px;
   height: 45px;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
   background-color: #ffffff;
+}
+
+#filter {
+  margin-left: 10px;
 }
 
 .books-form button {
@@ -182,5 +176,10 @@ nav {
     justify-content: space-between;
     width: 50%;
     margin: 0 auto;
+  }
+
+  #filter {
+    margin: 0;
+    width: 80%;
   }
 }
