@@ -30,7 +30,8 @@ class BooksForm extends Component {
     }
   }
 
-  handleSubmit = () => {
+  handleSubmit = event => {
+    event.preventDefault();
     const { title, category } = this.state;
     const { createBook } = this.props;
     const newBook = {
@@ -38,11 +39,13 @@ class BooksForm extends Component {
       title,
       category,
     };
-    createBook(newBook);
-    this.setState({
-      title: '',
-      category: 'Action',
-    });
+    if (newBook.title !== '') {
+      createBook(newBook);
+      this.setState({
+        title: '',
+        category: 'Action',
+      });
+    }
   }
 
   render = () => {
@@ -58,21 +61,27 @@ class BooksForm extends Component {
     const { title: stateTitle, category: stateCategory } = this.state;
 
     return (
-      <div>
-        <form>
-          <label htmlFor="title">
-            Title:
-            <input type="text" id="title" value={stateTitle} onChange={this.handleChange} />
-          </label>
+      <div className="books-form-div">
+        <h3>ADD NEW BOOK</h3>
+        <form className="books-form">
+          <input
+            type="text"
+            id="title"
+            value={stateTitle}
+            placeholder="TItle"
+            onChange={this.handleChange}
+          />
 
-          <label htmlFor="category">
-            Category:
-            <select id="category" name="category" value={stateCategory} onChange={this.handleChange}>
-              {catOptions}
-            </select>
-          </label>
+          <select
+            id="category"
+            name="category"
+            value={stateCategory}
+            onChange={this.handleChange}
+          >
+            {catOptions}
+          </select>
 
-          <button type="button" onClick={this.handleSubmit}>Submit</button>
+          <button type="submit" onClick={event => this.handleSubmit(event)}>ADD BOOK</button>
         </form>
       </div>
     );
