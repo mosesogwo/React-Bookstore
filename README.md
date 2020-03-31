@@ -34,6 +34,9 @@ To get a local copy up and running follow these simple steps.
 - Run `npm start` 
 - If all goes well, App will open in your browser.
 
+## Upcoming features
+- Rails back-end for persisting books storage.
+- Tracking book read progress.
 
 ## Author
 
