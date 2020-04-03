@@ -34,7 +34,13 @@ To get a local copy up and running follow these simple steps.
 - Run `npm start` 
 - If all goes well, App will open in your browser.
 
-## Upcoming features
+## Features
+- User can add books to the library, grouped by categories.
+- User can remove books from the library.
+- User can filter books based on category.
+
+
+## Upcoming Features
 - Rails back-end for persisting books storage.
 - Tracking book read progress.
 
@@ -42,8 +48,10 @@ To get a local copy up and running follow these simple steps.
 
 👤 **Moses Ogwo**
 
+- Email: mosesogwo@gmail.com
 - Github: [@mosesogwo](https://github.com/mosesogwo)
-- Linkedin: [Moses Ogwo](https://www.linkedin.com/in/moses-ogwo-327168114/)
+- LinkedIn: [Moses Ogwo](https://www.linkedin.com/in/mosesogwo/)
+- Portfolio: [Moses Ogwo](https://mosesogwo.github.io/My-Portfolio/)
 
 
 ## Acknowledgments
