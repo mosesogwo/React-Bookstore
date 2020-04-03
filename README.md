@@ -20,6 +20,14 @@
 
 [Live Demo Link](https://mbi-bookstore.herokuapp.com/)
 
+## Features
+- User can add books to the library, grouped by categories.
+- User can remove books from the library.
+- User can filter books based on category.
+
+## Upcoming Features
+- Rails back-end for persisting books storage.
+- Tracking book read progress.
 
 ## Getting Started
 
@@ -34,15 +42,6 @@ To get a local copy up and running follow these simple steps.
 - Run `npm start` 
 - If all goes well, App will open in your browser.
 
-## Features
-- User can add books to the library, grouped by categories.
-- User can remove books from the library.
-- User can filter books based on category.
-
-
-## Upcoming Features
-- Rails back-end for persisting books storage.
-- Tracking book read progress.
 
 ## Author
 
