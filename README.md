@@ -26,8 +26,8 @@
 - User can filter books based on category.
 
 ## Upcoming Features
-- Rails back-end for persisting books storage.
-- Tracking book read progress.
+- Rails back-end for storing saved books.
+- Tracking reading progress.
 
 ## Getting Started
 
